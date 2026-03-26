@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portal Interno | PSolutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="bg-glow bg-glow-left" aria-hidden="true"></div>
+    <div class="bg-glow bg-glow-right" aria-hidden="true"></div>
+
+    <main class="layout">
+      <header class="brand-bar">
+        <img
+          id="brandLogo"
+          src="./assets/practical-solutions-logo-dark.png"
+          alt="Practical Solutions"
+          class="brand-logo"
+          data-logo-light="./assets/practical-solutions-logo-light.png"
+          data-logo-dark="./assets/practical-solutions-logo-dark.png"
+        />
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Cambiar tema">
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M2 12h3M19 12h3M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"></path>
+          </svg>
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"></path>
+          </svg>
+        </button>
+      </header>
+
+      <section class="hero">
+        <h1>Acceso rápido a las aplicaciones de la empresa</h1>
+        <p class="hero-text">
+          Un solo lugar para entrar a todas las herramientas clave de trabajo.
+        </p>
+
+        <div class="search-wrapper">
+          <label for="search" class="sr-only">Buscar aplicaciones</label>
+          <input id="search" type="search" placeholder="Buscar por nombre, categoría o descripción..." />
+        </div>
+      </section>
+
+      <section>
+        <div id="cards" class="cards" aria-live="polite"></div>
+        <p id="emptyState" class="empty hidden">No se encontraron aplicaciones con ese criterio.</p>
+      </section>
+    </main>
+
+    <template id="cardTemplate">
+      <article class="card">
+        <div class="card-header">
+          <span class="tag"></span>
+          <h2></h2>
+        </div>
+        <p class="description"></p>
+        <a class="open-btn" target="_blank" rel="noopener noreferrer">Abrir aplicación</a>
+      </article>
+    </template>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
