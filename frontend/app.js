@@ -66,7 +66,6 @@ const renderCards = (items) => {
     const fragment = template.content.cloneNode(true);
     const card = fragment.querySelector('.card');
 
-    fragment.querySelector('.tag').textContent = app.category;
     fragment.querySelector('h2').textContent = app.name;
     fragment.querySelector('.description').textContent = app.description;
 
