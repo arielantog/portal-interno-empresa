@@ -8,4 +8,4 @@ script = ""
 [[actions]]
 name = "Run"
 icon = "run"
-command = "powershell -ExecutionPolicy Bypass -File .\\start-portal.ps1"
+command = "powershell -ExecutionPolicy Bypass -File .\\start.ps1"
